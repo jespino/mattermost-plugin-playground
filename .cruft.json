@@ -1,0 +1,16 @@
+{
+    "template": "git@github.com:jespino/cookiecutter-mattermost-plugin.git",
+    "commit": "3f02379a4641a36da92e520b0437afede21e5829",
+    "context": {
+        "cookiecutter": {
+            "project_dir": "mattermost-plugin-playground",
+            "id": "playground",
+            "name": "Components Playground",
+            "description": "Components Playground",
+            "frontend_language": "typescript",
+            "webapp": "true",
+            "server": "false",
+            "_template": "git@github.com:jespino/cookiecutter-mattermost-plugin.git"
+        }
+    }
+}
