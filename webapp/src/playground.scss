@@ -18,27 +18,7 @@
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 600;
-        .search-input {
-            margin: 0 20px 0 10px;
-            max-height: 20px;
-            align-self: center;
-            background: var(--center-channel-bg);
-            border: 1px solid rgba(221,221,221,0.3);
-            font-size: 14px;
-            padding: 14px;
-            border-radius: 3px
-        }
-        .all-teams-filter {
-            display: flex;
-            align-self: center;
-            input {
-                margin: 0 5px;
-                background: var(--center-channel-bg);
-            }
-            label {
-                margin-bottom: 0;
-            }
-        }
+        margin-bottom: 0;
     }
 
     .navbar-main {
@@ -68,10 +48,10 @@
     }
 
     .navbar-title {
-        font-size: 16px;
+        font-size: 20px;
         color: var(--center-channel-color);
         fill: var(--center-channel-color);
-        margin-left: 5px;
+        margin-left: 15px;
         display: flex;
         align-items: center;
     }
@@ -85,10 +65,29 @@
         padding: 0;
         display: flex;
         .body-nav {
+            padding: 15px;
             width: 200px;
+            background: var(--sidebar-bg);
+            font-size: 16px;
+            a {
+                cursor: pointer;
+                color: var(--sidebar-text-80);
+                text-decoration: none;
+                &.active {
+                    color: var(--sidebar-text);
+                }
+            }
+            ul {
+                padding-left: 0px;
+            }
+            li {
+                list-style-type: none;
+                padding-bottom: 5px;
+            }
         }
         .story {
             flex-grow: 1;
+            padding: 15px;
         }
     }
 }

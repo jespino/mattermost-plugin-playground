@@ -2,7 +2,12 @@ import React from 'react';
 
 import * as manifest from '../../manifest';
 
+import {IntlProvider} from 'react-intl';
+
+const WebappUtils = window.WebappUtils;
+
 import BadgesStory from './stories/badges_story';
+import MenuStory from './stories/menu_story';
 
 import './playground.scss';
 
@@ -13,6 +18,7 @@ type State = {
 
 const stories = {
     Badges: BadgesStory,
+    Menus: MenuStory,
 };
 
 export default class Playground extends React.PureComponent<Props, State> {
@@ -26,7 +32,18 @@ export default class Playground extends React.PureComponent<Props, State> {
     private renderStoriesList = (): React.ReactNode => {
         return (
             <ul>
-                {Object.keys(stories).map((name) => (<li onClick={() => this.setState({currentStory: name})} key={name}>{name}</li>))}
+                {Object.keys(stories).map((name): React.ReactNode => (
+                    <li
+                        key={name}
+                    >
+                        <a
+                            onClick={(): void => this.setState({currentStory: name})}
+                            className={name === this.state.currentStory ? 'active' : ''}
+                        >
+                            {name}
+                        </a>
+                    </li>
+                ))}
             </ul>
         );
     }
@@ -53,7 +70,15 @@ export default class Playground extends React.PureComponent<Props, State> {
                         {this.renderStoriesList()}
                     </div>
                     <div className='story'>
-                        {this.renderCurrentStory()}
+                        <IntlProvider
+                            key={'en'}
+                            locale={'en'}
+                            messages={{}}
+                            textComponent='span'
+                            wrapRichTextChunksInFragment={false}
+                        >
+                            {this.renderCurrentStory()}
+                        </IntlProvider>
                     </div>
                 </div>
             </div>

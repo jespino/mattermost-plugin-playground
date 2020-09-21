@@ -13,9 +13,14 @@ export default class Plugin {
             if (message.indexOf('/playground') === 0) {
                 const currentTeam: any = getCurrentTeam(store.getState());
                 WebappUtils.browserHistory.push(`/${currentTeam.name}/${pluginId}/`);
+                return {};
             }
-            return {};
+            return null;
         });
+        registry.registerMainMenuAction('Playground', (): void => {
+            const currentTeam: any = getCurrentTeam(store.getState());
+            WebappUtils.browserHistory.push(`/${currentTeam.name}/${pluginId}/`);
+        }, null);
     }
 }
 

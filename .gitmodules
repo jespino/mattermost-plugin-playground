@@ -1,3 +1,0 @@
-[submodule "mattermost-webapp"]
-	path = mattermost-webapp
-	url = https://github.com/mattermost/mattermost-webapp
