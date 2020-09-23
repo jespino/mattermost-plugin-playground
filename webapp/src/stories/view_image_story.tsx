@@ -11,7 +11,7 @@ function getPublicSamplePath(filename: string): string {
     return `/plugins/${pluginId}/public/sample-files/${filename}`;
 }
 
-export default function MenuStory(): React.ReactNode {
+export default function ViewImageStory(): React.ReactNode {
     const [openPreviewIdx, setOpenPreviewIdx] = useState(-1);
     return (
         <div className='ViewImageStory'>

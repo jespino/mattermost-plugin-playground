@@ -9,6 +9,7 @@ const WebappUtils = window.WebappUtils;
 import BadgesStory from './stories/badges_story';
 import MenuStory from './stories/menu_story';
 import ViewImageStory from './stories/view_image_story';
+import ProfilePictureStory from './stories/profile_picture_story';
 
 import './playground.scss';
 
@@ -21,6 +22,7 @@ const stories = {
     Badges: BadgesStory,
     Menus: MenuStory,
     'File Preview': ViewImageStory,
+    'Profile Picture': ProfilePictureStory,
 };
 
 export default class Playground extends React.PureComponent<Props, State> {
