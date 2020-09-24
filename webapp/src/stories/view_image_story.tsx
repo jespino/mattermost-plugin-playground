@@ -7,7 +7,7 @@ import {id as pluginId} from '../manifest';
 
 const {ViewImageModal} = window.Components;
 
-function getPublicSamplePath(filename: string): string { 
+function getPublicSamplePath(filename: string): string {
     return `/plugins/${pluginId}/public/sample-files/${filename}`;
 }
 
