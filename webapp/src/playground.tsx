@@ -10,6 +10,7 @@ import BadgesStory from './stories/badges_story';
 import MenuStory from './stories/menu_story';
 import ViewImageStory from './stories/view_image_story';
 import ProfilePictureStory from './stories/profile_picture_story';
+import EmojiPickerStory from './stories/emoji_picker_story';
 
 import './playground.scss';
 
@@ -23,6 +24,7 @@ const stories = {
     Menus: MenuStory,
     'File Preview': ViewImageStory,
     'Profile Picture': ProfilePictureStory,
+    'Emoji Picker': EmojiPickerStory,
 };
 
 export default class Playground extends React.PureComponent<Props, State> {
