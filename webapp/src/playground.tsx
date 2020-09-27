@@ -11,6 +11,7 @@ import MenuStory from './stories/menu_story';
 import ViewImageStory from './stories/view_image_story';
 import ProfilePictureStory from './stories/profile_picture_story';
 import EmojiPickerStory from './stories/emoji_picker_story';
+import FileSearchResultItemStory from './stories/file_search_result_item_story';
 
 import './playground.scss';
 
@@ -25,6 +26,7 @@ const stories = {
     'File Preview': ViewImageStory,
     'Profile Picture': ProfilePictureStory,
     'Emoji Picker': EmojiPickerStory,
+    'File Search Result Item': FileSearchResultItemStory,
 };
 
 export default class Playground extends React.PureComponent<Props, State> {
