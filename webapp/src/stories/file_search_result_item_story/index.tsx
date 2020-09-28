@@ -4,14 +4,14 @@
 import {connect} from 'react-redux';
 
 import {getCurrentTeam} from 'mattermost-redux/selectors/entities/teams';
-import {Team} from 'mattermost-redux/types/teams';
 import {GlobalState} from 'mattermost-redux/types/store';
 
 import FileSearchResultItem from './file_search_result_item_story';
 
-function mapStateToProps(state: GlobalState): {currentTeam: Team} {
+function mapStateToProps(state: GlobalState): {teamName: string} {
+    const currentTeam = getCurrentTeam(state);
     return {
-        currentTeam: getCurrentTeam(state),
+        teamName: currentTeam && currentTeam.name,
     };
 }
 
